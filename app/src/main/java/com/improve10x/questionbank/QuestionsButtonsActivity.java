@@ -31,7 +31,7 @@ public class QuestionsButtonsActivity extends AppCompatActivity {
     }
     private void handleQuestion2Btn(){
         question2Btn.setOnClickListener(view -> {
-            String question = "How many plantes are there in solar system";
+            String question = "Given a = 10, b = 20, return true the sum of both numbers is less than hundred  otherwise return false";
             String optionA = "A";
             String optionB = "B";
             String optionC = "C";
