@@ -4,37 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="18dp"
+    android:layout_margin="12dp"
     android:orientation="vertical"
-    tools:context=".QuestionsButtonsActivity">
+    tools:context=".ChedkboxAcivity">
 
-    <Button
-        android:id="@+id/question_1_btn"
+    <TextView
+        android:id="@+id/cbquestion_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Questions 1" />
+        android:text="TextView"
+        android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/question_2_btn"
+    <CheckBox
+        android:id="@+id/OptionA_cb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Question 2" />
+        android:text="CheckBox" />
 
-    <Button
-        android:id="@+id/question_3_btn"
+    <CheckBox
+        android:id="@+id/optionB_cb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Question 3" />
+        android:text="CheckBox" />
 
-    <Button
-        android:id="@+id/question_4_btn"
+    <CheckBox
+        android:id="@+id/optionC_cb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Question 4" />
+        android:text="CheckBox" />
 
-    <Button
-        android:id="@+id/question_5_btn"
+    <CheckBox
+        android:id="@+id/optionD_cb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Question 5" />
+        android:text="CheckBox" />
+
+    <Button
+        android:id="@+id/checkboxverify_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Verify" />
 </LinearLayout>
