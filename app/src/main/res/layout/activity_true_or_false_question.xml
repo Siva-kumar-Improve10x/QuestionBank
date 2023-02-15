@@ -6,48 +6,38 @@
     android:layout_height="match_parent"
     android:layout_margin="12dp"
     android:orientation="vertical"
-    tools:context=".QuestionsActivity">
+    tools:context=".TrueOrFalseQuestionActivity">
 
     <TextView
-        android:id="@+id/textv1_tv"
+        android:id="@+id/torftextview_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="-"
+        android:text="TextView"
         android:textSize="16sp" />
 
     <RadioGroup
-        android:id="@+id/radioGroup1_rg"
+        android:id="@+id/TorF_rg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RadioButton
-            android:id="@+id/rb_1"
+            android:id="@+id/true_rb"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="True" />
 
         <RadioButton
-            android:id="@+id/rb_2"
+            android:id="@+id/false_rb"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <RadioButton
-            android:id="@+id/rb_3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <RadioButton
-            android:id="@+id/rb_4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:text="False" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/verify_Btn"
+        android:id="@+id/torfverify_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:text="Verify" />
-
 </LinearLayout>
