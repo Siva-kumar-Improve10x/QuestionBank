@@ -51,7 +51,6 @@ public class TrueOrFalseQuestionActivity extends AppCompatActivity implements IQ
         Intent intent = getIntent();
         question = intent.getStringExtra("question1");
         answer   = intent.getStringExtra("answer");
-
     }
 
     @Override
@@ -65,7 +64,6 @@ public class TrueOrFalseQuestionActivity extends AppCompatActivity implements IQ
         RadioButton SelectedOptionRb = findViewById(SelectedId);
         String text = SelectedOptionRb.getText().toString();
         return text;
-
     }
 
     @Override
