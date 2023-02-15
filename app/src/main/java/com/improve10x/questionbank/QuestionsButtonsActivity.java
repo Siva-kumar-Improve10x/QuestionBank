@@ -43,7 +43,7 @@ public class QuestionsButtonsActivity extends AppCompatActivity {
 
     private void handleQuestion12QueSelBtn() {
         question12btn.setOnClickListener(v -> {
-            String question = "What is the size of double data type in bytes";
+            String question = " What is the size of \"double\" data type in bytes";
             String answer = "8";
             navigateToNumberSelectActivity(question, answer);
         });
@@ -51,7 +51,7 @@ public class QuestionsButtonsActivity extends AppCompatActivity {
 
     private void handleQuestion11QueSelBtn() {
         question11btn.setOnClickListener(v -> {
-            String question = "What is the size of long data type in bytes";
+            String question = "What is the size of \"long\" data type in bytes";
             String answer = "8";
             navigateToNumberSelectActivity(question, answer);
         });
@@ -60,10 +60,9 @@ public class QuestionsButtonsActivity extends AppCompatActivity {
 
     private void handleQuestion10QueSelBtn() {
         question10Btn.setOnClickListener(v -> {
-            String question = "What is the size of int data type in bytes";
+            String question = "What is the size of \"int\" data type in bytes";
             String answer = "4";
             navigateToNumberSelectActivity(question, answer);
-
         });
     }
 
@@ -217,7 +216,7 @@ public class QuestionsButtonsActivity extends AppCompatActivity {
 
     private void navigateToNumberSelectActivity(String question, String answer) {
         Intent numberSelectQuestionActivity = new Intent(this, NumberSelectQuestionActivity.class);
-        numberSelectQuestionActivity.putExtra("question", question);
+        numberSelectQuestionActivity.putExtra("question2", question);
         numberSelectQuestionActivity.putExtra("answer", answer);
         startActivity(numberSelectQuestionActivity);
     }

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class NumberSelectQuestionActivity extends AppCompatActivity implements IQuestionActivity {
     TextView numQuestionTxt;
@@ -23,6 +24,8 @@ public class NumberSelectQuestionActivity extends AppCompatActivity implements I
         initViews();
         getQuestion();
         displayData();
+        handleSubmitBtn();
+        getSelectedOptions();
     }
 
     private void initViews() {
@@ -34,33 +37,36 @@ public class NumberSelectQuestionActivity extends AppCompatActivity implements I
     @Override
     public void handleSubmitBtn() {
         verifySeekbarBtn.setOnClickListener(v -> {
+            verifyAnswer();
         });
-
     }
 
     @Override
     public void getQuestion() {
-        Intent intent = new Intent();
-        question = intent.getStringExtra("question");
+        Intent intent = getIntent();
+        question = intent.getStringExtra("question2");
         answer = intent.getStringExtra("answer");
-
     }
 
     @Override
     public void displayData() {
         numQuestionTxt.setText(question);
-
-
-
     }
 
     @Override
     public String getSelectedOptions() {
-        return null;
+        int process = seekbarSb.getProgress();
+        return process + "";
     }
 
     @Override
     public void verifyAnswer() {
+        String number = getSelectedOptions();
+        if (answer.equalsIgnoreCase(number)) {
+            Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Wrong", Toast.LENGTH_SHORT).show();
+        }
 
     }
 }
