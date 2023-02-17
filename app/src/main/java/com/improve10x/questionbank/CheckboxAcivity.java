@@ -31,6 +31,7 @@ public class CheckboxAcivity extends AppCompatActivity implements IQuestionActiv
         inItViews();
         getQuestion();
         displayData();
+        handleSubmitBtn();
 
     }
 
@@ -41,7 +42,6 @@ public class CheckboxAcivity extends AppCompatActivity implements IQuestionActiv
         optionCCb = findViewById(R.id.optionC_cb);
         optionDCb = findViewById(R.id.optionD_cb);
         checkboxVerifyBtn = findViewById(R.id.checkboxverify_Btn);
-
     }
 
 
@@ -56,10 +56,21 @@ public class CheckboxAcivity extends AppCompatActivity implements IQuestionActiv
 
     @Override
     public String getSelectedOptions() {
-
-        return null;
+        String result = "";
+        if (optionACb.isChecked()) {
+            result = result + "a";
+        }
+        if (optionBCb.isChecked()) {
+            result = result + "b";
+        }
+        if (optionCCb.isChecked()) {
+            result = result + "c";
+        }
+        if (optionDCb.isChecked()) {
+            result = result + "d";
+        }
+        return  result ;
     }
-
     public void handleSubmitBtn() {
         checkboxVerifyBtn.setOnClickListener(v -> {
             verifyAnswer();
@@ -68,7 +79,7 @@ public class CheckboxAcivity extends AppCompatActivity implements IQuestionActiv
 
     @Override
     public void getQuestion() {
-        Intent intent = new Intent();
+        Intent intent = getIntent();
         question = intent.getStringExtra("question1");
         optionA = intent.getStringExtra("option1");
         optionB = intent.getStringExtra("option2");
@@ -78,13 +89,12 @@ public class CheckboxAcivity extends AppCompatActivity implements IQuestionActiv
     }
 
     public void verifyAnswer() {
-//        String selectedAnswer = d();
-//        if (answer.equals(selectedAnswer)) {
-//            Toast.makeText(this, "Correct Answer", Toast.LENGTH_SHORT).show();
-//        } else {
-//            Toast.makeText(this, "Wrong Answer ):", Toast.LENGTH_SHORT).show();
-//        }
-//    }
+        String selectedAnswer = getSelectedOptions();
+        if (answer.equals(selectedAnswer)) {
+            Toast.makeText(this, "Correct Answer", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Wrong Answer ):", Toast.LENGTH_SHORT).show();
+        }
+    }
 
 }
-    }

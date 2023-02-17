@@ -19,6 +19,9 @@ public class QuestionsButtonsActivity extends AppCompatActivity {
     Button question10Btn;
     Button question11btn;
     Button question12btn;
+    Button question13btn;
+    Button question14btn;
+    Button question15btn;
 
 
     @Override
@@ -38,7 +41,38 @@ public class QuestionsButtonsActivity extends AppCompatActivity {
         handleQuestion10QueSelBtn();
         handleQuestion11QueSelBtn();
         handleQuestion12QueSelBtn();
+        handleQuestion13TQBtn();
+        handleQuestion14TQBtn();
+        handleQuestion15TQBtn();
 
+    }
+
+    private void handleQuestion15TQBtn() {
+        question15btn.setOnClickListener(v -> {
+            String question = "_____________ component is used to suppoer vertical Scrolling";
+            String answer = "Scrollview";
+            String trimTXt = answer.trim();
+            navigateToTextQuestionActivity(question,trimTXt);
+
+        });
+    }
+
+    private void handleQuestion14TQBtn() {
+        question14btn.setOnClickListener(v -> {
+            String question = "Android is an ________";
+            String answer = "Operating System";
+            String trimTxt = answer.trim();
+            navigateToTextQuestionActivity(question,trimTxt);
+        });
+    }
+
+    private void handleQuestion13TQBtn() {
+        question13btn.setOnClickListener(v -> {
+            String question = "Java ______ can contain variables and methods";
+            String answer = "Class";
+            String trimTxt = answer.trim();
+            navigateToTextQuestionActivity(question,trimTxt);
+        });
     }
 
     private void handleQuestion12QueSelBtn() {
@@ -99,7 +133,7 @@ public class QuestionsButtonsActivity extends AppCompatActivity {
             String optionB = "Sun";
             String optionC = "Jupiter";
             String optionD = "Saturn";
-            String answer = "abc";
+            String answer = "acd";
             navigateToCheckBoxActvity(question, optionA, optionB, optionC, optionD, answer);
 
         });
@@ -112,7 +146,7 @@ public class QuestionsButtonsActivity extends AppCompatActivity {
             String optionB = "onStop";
             String optionC = "onResume";
             String optionD = "onPause";
-            String answer = "bcd";
+            String answer = "abcd";
             navigateToCheckBoxActvity(question, optionA, optionB, optionC, optionD, answer);
 
         });
@@ -125,7 +159,7 @@ public class QuestionsButtonsActivity extends AppCompatActivity {
             String optionB = "Mouse";
             String optionC = "Monitor";
             String optionD = "keyboard";
-            String answer = "cd";
+            String answer = "bcd";
             navigateToCheckBoxActvity(question, optionA, optionB, optionC, optionD, answer);
         });
     }
@@ -182,6 +216,9 @@ public class QuestionsButtonsActivity extends AppCompatActivity {
         question10Btn = findViewById(R.id.question_10_btn);
         question11btn = findViewById(R.id.question_11_btn);
         question12btn = findViewById(R.id.question_12_btn);
+        question13btn = findViewById(R.id.question_13_btn);
+        question14btn = findViewById(R.id.question_14_btn);
+        question15btn = findViewById(R.id.question_15_btn);
 
     }
 
@@ -219,5 +256,12 @@ public class QuestionsButtonsActivity extends AppCompatActivity {
         numberSelectQuestionActivity.putExtra("question2", question);
         numberSelectQuestionActivity.putExtra("answer", answer);
         startActivity(numberSelectQuestionActivity);
+    }
+
+    private void navigateToTextQuestionActivity(String question, String answer) {
+        Intent textQuestionActivity = new Intent(this, TextQuestionActivity.class);
+        textQuestionActivity.putExtra("question2", question);
+        textQuestionActivity.putExtra("answer", answer);
+        startActivity(textQuestionActivity);
     }
 }

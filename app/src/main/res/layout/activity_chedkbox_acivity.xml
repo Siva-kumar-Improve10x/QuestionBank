@@ -25,20 +25,17 @@
     <CheckBox
         android:id="@+id/optionB_cb"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CheckBox" />
+        android:layout_height="wrap_content" />
 
     <CheckBox
         android:id="@+id/optionC_cb"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CheckBox" />
+        android:layout_height="wrap_content" />
 
     <CheckBox
         android:id="@+id/optionD_cb"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CheckBox" />
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/checkboxverify_Btn"

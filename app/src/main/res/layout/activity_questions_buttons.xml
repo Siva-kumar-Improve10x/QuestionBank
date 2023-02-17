@@ -90,6 +90,24 @@
                 android:layout_height="wrap_content"
                 android:text="question 12" />
 
+            <Button
+                android:id="@+id/question_13_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question 13 TQ" />
+
+            <Button
+                android:id="@+id/question_14_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question 14 TQ" />
+
+            <Button
+                android:id="@+id/question_15_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question 14 TQ" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
